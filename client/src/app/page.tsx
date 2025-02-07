@@ -5,7 +5,6 @@ import { MiniMenu } from "@/components/MiniMenu/MiniMenu";
 import { Maps } from "@/components/Maps/Maps";
 import { Footer } from "@/components/Footer/Footer";
 import { Speciality } from "@/components/Speciality/Speciality";
-import { metadata } from "@/components/Metadata/metadata";
 
 const Home: React.FC = () => {
   return (
