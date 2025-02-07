@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import {
+  MenuItem,
   menuSection1,
   menuSection2,
   menuSection3,
   menuSection4,
 } from "./MenuItems";
 
-const MenuSection: React.FC<{ title: string; items: any[] }> = ({
+const MenuSection: React.FC<{ title: string; items: MenuItem[] }> = ({
   title,
   items,
 }) => (

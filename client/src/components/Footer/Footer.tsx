@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import clsx from "clsx";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -14,7 +13,14 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto flex flex-col items-center lg:flex-row w-full gap-14 text-secondary">
           <div className="lg:mr-8 md:max-w-52">
             <div className="flex items-center mx-auto mb-4 max-w-40 lg:max-w-60 w-full ">
-              <img src="logo.png" alt="Logo" className="w-full h-full " />
+              <Image
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "100%" }}
+                src="/logo.png"
+                alt="Logo"
+              />
             </div>
             <p className="text-center text-secondary max-w-50 lg:max-w-60 mx-auto">
               Bringing authentic Albanian flavors since 1998, with every meal
@@ -68,15 +74,17 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col justify-center max-md:max-w-52 max-md:mx-auto w-full">
-              <h4 className="text-primary text-2xl pb-6 bg-clip-text font-semibold">
+              <h4 className="text-primary text-center text-2xl pb-6 bg-clip-text font-semibold">
                 Contact Us
               </h4>
               <p
                 className={clsx(
-                  "text-secondary text-lg font-bold sm:w-36 text-center py-2 px-4"
+                  "text-secondary  text-lg font-bold w-full  text-center py-2 px-4"
                 )}
               >
-                +355 697514180 +355 697514181
+                +355 697514180
+                <br />
+                +355 697514181
               </p>
             </div>
           </div>

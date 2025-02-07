@@ -4,6 +4,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { Nav } from "./Nav";
 import { StickyHeader } from "./StickyHeader";
+import Image from "next/image";
 
 export const navItems = [
   { title: "Home", href: "#hero-banner" },
@@ -17,7 +18,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
-  const [isActive, setIsActive] = useState<number | null>(null);
+  const [isActive] = useState<number | null>(null);
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -96,11 +97,15 @@ export const Header = () => {
             "transition-all duration-300"
           )}
         >
-          <div className="flex-shrink-0">
-            <img
+          <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
+            <Image
               src="/logo-no-bg.png"
               alt="Logo"
-              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full"
+              className="rounded-full"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "100%" }}
             />
           </div>
 
@@ -180,9 +185,13 @@ export const Header = () => {
             />
           </button>
           <div className="w-14 h-14 md:hidden">
-            <img
-              className="w-full h-full rounded-sm"
-              src="logo-no-bg.png"
+            <Image
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "100%" }}
+              className=" rounded-sm"
+              src="/logo-no-bg.png"
               alt="logo"
             />
           </div>

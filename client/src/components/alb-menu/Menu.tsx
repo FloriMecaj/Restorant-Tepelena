@@ -7,8 +7,9 @@ import {
   menuSection3,
   menuSection4,
 } from "./MenuItems";
+import { MenuItem } from "../Menu/MenuItems";
 
-const MenuSection: React.FC<{ title: string; items: any[] }> = ({
+const MenuSection: React.FC<{ title: string; items: MenuItem[] }> = ({
   title,
   items,
 }) => (

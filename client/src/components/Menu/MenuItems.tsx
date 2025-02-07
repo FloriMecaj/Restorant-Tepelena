@@ -1,4 +1,10 @@
-export const menuSection1 = [
+export type MenuItem = {
+  name: string;
+  price: number;
+  description: string;
+};
+
+export const menuSection1: MenuItem[] = [
   {
     name: "LAMB/GOAT ON A SPIT",
     price: 2800,

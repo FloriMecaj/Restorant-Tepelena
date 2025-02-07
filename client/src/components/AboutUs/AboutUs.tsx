@@ -21,14 +21,14 @@ export const AboutUs = () => {
           </p>
           <p className="text-lg text-secondary text-left leading-relaxed md:text-xl">
             Welcome to Restaurant Tepelena, where tradition meets flavor! Since
-            1998, we've been proud to serve authentic Albanian cuisine, offering
-            a unique taste of our rich heritage. Our menu features time-honored
-            recipes made with the finest local ingredients, bringing the flavors
-            of Albania straight to your table. Whether you're here to enjoy a
-            cozy meal with family or celebrate a special occasion, we promise a
-            warm, welcoming atmosphere and dishes that will make you feel at
-            home. Join us and experience the true taste of Albania, served with
-            passion and love.
+            1998, we&apos;ve been proud to serve authentic Albanian cuisine,
+            offering a unique taste of our rich heritage. Our menu features
+            time-honored recipes made with the finest local ingredients,
+            bringing the flavors of Albania straight to your table. Whether
+            you&apos;re here to enjoy a cozy meal with family or celebrate a
+            special occasion, we promise a warm, welcoming atmosphere and dishes
+            that will make you feel at home. Join us and experience the true
+            taste of Albania, served with passion and love.
           </p>
         </div>
       </div>

@@ -1,4 +1,6 @@
-export const menuSection1 = [
+import { MenuItem } from "../Menu/MenuItems";
+
+export const menuSection1: MenuItem[] = [
   {
     name: "QINGJ/KEC NE HELL",
     price: 2800,

@@ -8,9 +8,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "../ui/carousel";
-import { EmblaOptionsType } from "embla-carousel";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 const images = [
   "/images/lokali1.jpeg",
@@ -35,11 +33,15 @@ export function AboutUsCarousel() {
           {images.map((src, index) => (
             <CarouselItem key={index} className="flex justify-center">
               <div className="opacity-55">
-                <img
+                <Image
                   src={src}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover rounded-lg max-[345px]:h-[280px]"
-                />{" "}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%" }} // optional
+                  alt="Company Logo"
+                  className="w-full h-full"
+                />
               </div>
             </CarouselItem>
           ))}

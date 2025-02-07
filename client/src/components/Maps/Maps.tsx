@@ -12,9 +12,9 @@ export const Maps = () => {
 
       <p className="text-lg mb-6 text-center md:max-w-5xl text-secondary px-6 md:text-2xl">
         Located in the heart of Tirana, our place is easy to find and offers a
-        welcoming atmosphere for all. Whether you're visiting us for a quick
-        bite or a long stay, we're here to serve you in the city's most vibrant
-        area.
+        welcoming atmosphere for all. Whether you&apos;re visiting us for a
+        quick bite or a long stay, we&apos;re here to serve you in the
+        city&apos;s most vibrant area.
       </p>
 
       <div className="text-center mb-6 px-6">
