@@ -7,8 +7,6 @@ import { Footer } from "@/components/Footer/Footer";
 import { Speciality } from "@/components/Speciality/Speciality";
 import { metadata } from "@/components/Metadata/metadata";
 
-export { metadata };
-
 const Home: React.FC = () => {
   return (
     <>
