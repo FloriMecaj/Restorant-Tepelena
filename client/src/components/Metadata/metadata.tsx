@@ -3,7 +3,7 @@ export const metadata = {
   description:
     "Restaurant Tepelena, a staple in Tirana since 1998, serves authentic Albanian dishes in a warm, traditional setting. A must-visit restaurant for lovers of Albanian cuisine.",
   keywords:
-    "traditional restaurant, restaurants in Tirana, Restaurant Tepelena, Albanian cuisine, best restaurants in Tirana, Tirana dining, authentic Albanian food, traditional food in Tirana, Tirana restaurants, restaurant in Albania",
+    "traditional restaurant, restaurants in Tirana, Restaurant Tepelena, Albanian cuisine, best restaurants in Tirana, Tirana dining, authentic Albanian food, traditional food in Tirana, Tirana restaurants, restaurant in Albania, mish, mish i pjekur, restorant tradicional, ushqim tradicional, taverna",
 
   openGraph: {
     title: "Restaurant Tepelena | Traditional Albanian Cuisine in Tirana",
