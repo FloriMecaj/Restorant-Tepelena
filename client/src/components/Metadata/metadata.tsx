@@ -11,14 +11,14 @@ export const metadata = {
       "Experience authentic Albanian cuisine at Restaurant Tepelena, a renowned restaurant in Tirana since 1998.",
     images: [
       {
-        url: "/images/restaurant-tepelena.jpg",
+        url: "/images/restorant-tepelena.jpg",
         width: 1200,
         height: 630,
         alt: "Traditional Albanian food at Restaurant Tepelena",
       },
     ],
-    url: "https://restauranttepelena.com",
-    siteName: "Restaurant Tepelena",
+    url: "https://restoranttepelena.com",
+    siteName: "Restorant Tepelena",
     type: "website",
   },
 
@@ -27,10 +27,10 @@ export const metadata = {
     title: "Restaurant Tepelena | Traditional Albanian Cuisine in Tirana",
     description:
       "Taste the finest traditional Albanian dishes at Restaurant Tepelena in Tirana, operating since 1998.",
-    images: ["https://restauranttepelena.com/images/og-image.jpg"],
+    images: ["https://restoranttepelena.com/images/og-image.jpg"],
   },
 
-  metadataBase: new URL("https://restauranttepelena.com"),
+  metadataBase: new URL("https://restoranttepelena.com"),
 
   alternates: {
     canonical: "/",
