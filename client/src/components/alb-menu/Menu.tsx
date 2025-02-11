@@ -57,13 +57,13 @@ export const Menu = () => {
       >
         <div className="container mx-auto flex justify-between items-center px-6">
           <h1 className="text-3xl font-bold text-primary animate-fade-in">
-            Our Menu
+            Menuja Jone
           </h1>
           <Link
             className="border border-primary text-primary font-bold py-2 px-4 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:shadow-lg animate-bounce-in"
             href="/"
           >
-            Go Back
+            Kthehu Mbrapa
           </Link>
         </div>
       </div>
@@ -72,7 +72,7 @@ export const Menu = () => {
       <div className="w-full h-[400px] bg-[url('/images/menu.jpeg')] bg-cover bg-fixed bg-center relative flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="text-6xl font-bold text-primary text-center relative z-10 animate-fade-in-up">
-          Discover Our Flavors
+          Zbulo Shijet Tona
         </h1>
       </div>
 
