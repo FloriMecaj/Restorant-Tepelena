@@ -44,9 +44,9 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "https://restoranttepelena.com/favicon.ico",
+    shortcut: "https://restoranttepelena.com/favicon-16x16.png",
+    apple: "https://restoranttepelena.com/apple-touch-icon.png",
   },
 };
 
