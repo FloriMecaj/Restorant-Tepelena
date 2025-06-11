@@ -1,22 +1,28 @@
 import React from "react";
-import { HeroBanner } from "@/components/HeroBanner/HeroBanner";
-import { AboutUs } from "@/components/AboutUs/AboutUs";
-import { MiniMenu } from "@/components/MiniMenu/MiniMenu";
-import { Maps } from "@/components/Maps/Maps";
-import { Footer } from "@/components/Footer/Footer";
-import { Speciality } from "@/components/Speciality/Speciality";
-import { metadata } from "@/components/Metadata/metadata"; // Import main metadata
+import { HeroBanner } from "@/components/HomePage/HeroBanner";
+import { AboutUs } from "@/components/HomePage/AboutUs";
+import { Maps } from "@/components/HomePage/Maps";
+import { Footer } from "@/components/HomePage/Footer";
+import { Speciality } from "@/components/HomePage/Speciality";
+import { metadata } from "@/components/Metadata/metadata";
+import { Header } from "@/components/HomePage/Header";
+import { AlbanianPattern } from "@/components/HomePage/AlbanianPattern";
+import MenuPreviewSection from "@/components/HomePage/MenuPreviewSection";
 
 export { metadata };
 
 const Page = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full min-h-screen bg-cream">
+      <Header />
       <HeroBanner />
+      <AlbanianPattern />
       <AboutUs />
-      <MiniMenu />
+      <MenuPreviewSection />
+      <AlbanianPattern />
       <Speciality />
       <Maps />
+      <AlbanianPattern />
       <Footer />
     </div>
   );

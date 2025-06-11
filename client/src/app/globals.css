@@ -1,80 +1,144 @@
-/* Import Crimson Text font from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-:root {
-  --primary: #9e7c4b;
-  --secondary: #b7a893;
-  --font-family: "Crimson Text", serif; /* Add the custom font variable */
-}
+@layer base {
+  :root {
+    --background: 38 77% 96%; /* #FDF6EC - warm cream */
+    --foreground: 7 26% 23%; /* #4B2E2B - deep wood-brown */
 
-body {
-  overflow-y: auto;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-family); /* Apply Crimson Text globally */
-}
+    --card: 38 77% 96%; /* #FDF6EC - warm cream */
+    --card-foreground: 7 26% 23%; /* #4B2E2B - deep wood-brown */
 
-* {
-  box-sizing: border-box;
+    --popover: 38 77% 96%; /* #FDF6EC - warm cream */
+    --popover-foreground: 7 26% 23%; /* #4B2E2B - deep wood-brown */
+
+    --primary: 20 53% 49%; /* #C16639 - terracotta-orange */
+    --primary-foreground: 211 100% 99%; /* white text on terracotta */
+
+    --secondary: 38 57% 97%; /* #FAF5EE - light stone */
+    --secondary-foreground: 7 26% 23%; /* #4B2E2B - deep wood-brown */
+
+    --muted: 38 57% 97%; /* #FAF5EE - light stone */
+    --muted-foreground: 7 15% 30%; /* slightly lighter wood-brown */
+
+    --accent: 81 24% 41%; /* #7A8450 - muted olive-green */
+    --accent-foreground: 38 77% 96%; /* #FDF6EC - warm cream */
+
+    --destructive: 0 84.2% 60.2%; /* default destructive */
+    --destructive-foreground: 60 9.1% 97.8%; /* default destructive foreground */
+
+    --border: 38 33% 90%; /* lighter version of cream */
+    --input: 38 33% 90%; /* lighter version of cream */
+    --ring: 20 53% 49%; /* #C16639 - terracotta-orange */
+
+    /* Footer and other area colors */
+    --sidebar-background: 26 50% 13%; /* #2E1B13 - rich dark-brown */
+    --sidebar-foreground: 0 0% 100%; /* white for sidebar text */
+    --sidebar-primary: 20 53% 49%; /* #C16639 - terracotta-orange */
+    --sidebar-primary-foreground: 0 0% 100%; /* white text on terracotta */
+    --sidebar-accent: 81 24% 41%; /* #7A8450 - muted olive-green */
+    --sidebar-accent-foreground: 0 0% 100%; /* white on olive green */
+    --sidebar-border: 26 18% 25%; /* darker version of rich dark-brown */
+    --sidebar-ring: 20 53% 49%; /* #C16639 - terracotta-orange */
+
+    /* Chart colors if needed */
+    --chart-1: 20 53% 49%; /* #C16639 - terracotta-orange */
+    --chart-2: 81 24% 41%; /* #7A8450 - muted olive-green */
+    --chart-3: 7 26% 23%; /* #4B2E2B - deep wood-brown */
+    --chart-4: 26 50% 13%; /* #2E1B13 - rich dark-brown */
+    --chart-5: 38 57% 97%; /* #FAF5EE - light stone */
+
+    --radius: 1rem;
+  }
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+  * {
+    @apply border-border;
   }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+
+  body {
+    @apply bg-cream text-woodBrown font-opensans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-playfair font-bold;
+  }
+}
+
+@layer components {
+  .texture-overlay {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .menu-transition {
+    transition: transform 0.3s ease;
+  }
+
+  .menu-transition:hover {
+    transform: translateY(-5px);
+  }
+
+  .albanian-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 C30,17 70,3 100,10 L100,20 L0,20 Z' fill='%237A8450' fill-opacity='0.2'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    height: 20px;
+  }
+
+  .bg-cream {
+    background-color: #fdf6ec;
+  }
+
+  .bg-lightStone {
+    background-color: #faf5ee;
+  }
+
+  .bg-darkBrown {
+    background-color: #2e1b13;
+  }
+
+  .bg-terracotta {
+    background-color: #c16639;
+  }
+
+  .hover\:bg-terracottaHover:hover {
+    background-color: #a54e29;
+  }
+
+  .text-woodBrown {
+    color: #4b2e2b;
+  }
+
+  .text-terracotta {
+    color: #c16639;
+  }
+
+  .text-oliveGreen {
+    color: #7a8450;
+  }
+
+  .border-terracotta {
+    border-color: #c16639;
+  }
+
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-opensans {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .font-dancing {
+    font-family: "Dancing Script", cursive;
   }
 }

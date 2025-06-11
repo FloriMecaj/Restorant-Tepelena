@@ -1,13 +1,13 @@
 import React from "react";
-import { Menu } from "@/components/Menu/Menu";
 import { engMenuMetadata } from "@/components/Metadata/metadata";
+import MenuPage from "@/components/MenuPage/MenuPage";
 
 export const metadata = engMenuMetadata;
 
 const Page = () => {
   return (
     <div className="w-full h-full">
-      <Menu />
+      <MenuPage />
     </div>
   );
 };
