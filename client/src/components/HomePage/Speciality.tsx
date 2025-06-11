@@ -32,7 +32,7 @@ export const Speciality = () => {
   };
 
   return (
-    <section id="speciality" className="py-16 md:py-24 bg-cream">
+    <section id="speciality" className="pt-16 md:pt-24 bg-cream">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
         <div className="flex  flex-col md:flex-row items-center gap-10 md:gap-16">
           <motion.div
