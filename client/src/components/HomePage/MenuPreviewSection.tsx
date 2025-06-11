@@ -50,7 +50,7 @@ const MenuPreviewSection = () => {
           viewport={{ once: true }}
         >
           <Link href="/menu">
-            <span className="inline-flex items-center bg-terracotta hover:bg-terracottaHover text-white font-opensans font-medium px-8 py-3 rounded-2xl transition-colors shadow-lg">
+            <span className="inline-flex items-center bg-terracotta hover:bg-terracottaHover text-white font-opensans font-medium px-8 py-3 mb-4 rounded-2xl transition-colors shadow-lg">
               View Full Menu <ArrowRight className="ml-2 h-5 w-5" />
             </span>
           </Link>

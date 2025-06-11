@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
@@ -13,24 +13,26 @@ import {
 } from "@/components/ui/sheet";
 
 export const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const sheetRef = useRef<HTMLDivElement>(null);
 
+  // Close menu when clicking outside
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        menuOpen &&
+        sheetRef.current &&
+        !sheetRef.current.contains(e.target as Node)
+      ) {
+        setMenuOpen(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [menuOpen]);
 
   const navLinks = [
     { label: "Home", path: "/", hash: "" },
@@ -44,13 +46,15 @@ export const Header = () => {
     e: React.MouseEvent<HTMLAnchorElement>,
     hash: string
   ) => {
-    // If we're already on the home page and clicking a hash link
+    // Close mobile menu when a link is clicked
+    setMenuOpen(false);
+
     if (pathname === "/" && hash) {
       e.preventDefault();
       const element = document.getElementById(hash);
       if (element) {
         window.scrollTo({
-          top: element.offsetTop - 80, // Account for header height
+          top: element.offsetTop - 80,
           behavior: "smooth",
         });
       }
@@ -73,28 +77,40 @@ export const Header = () => {
         </div>
 
         {/* Mobile menu using Sheet */}
-        <Sheet>
+        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
           <SheetTrigger asChild>
             <button
               className="md:hidden text-woodBrown focus:outline-none"
               aria-label="Open menu"
+              onClick={() => setMenuOpen(true)}
             >
               <Menu className="h-6 w-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="md:hidden bg-cream shadow-lg">
-            <SheetHeader>
-              <SheetTitle className="text-terracotta font-dancing text-3xl font-bold mb-4">
-                Menu
-              </SheetTitle>
+          <SheetContent
+            ref={sheetRef}
+            side="right"
+            className="md:hidden bg-lightStone shadow-lg w-full max-w-xs"
+            onInteractOutside={(e) => e.preventDefault()} // Disable default outside click
+          >
+            <SheetHeader className="mb-6">
+              <div className="flex justify-between items-center">
+                <SheetTitle className="text-terracotta font-dancing text-3xl font-bold">
+                  Menu
+                </SheetTitle>
+              </div>
             </SheetHeader>
-            <nav className="flex flex-col space-y-4 text-woodBrown font-opensans font-medium">
+            <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.path}
                   onClick={(e) => handleNavClick(e, link.hash)}
-                  className="hover:text-terracotta transition-colors"
+                  className={`font-opensans font-medium px-4 py-3 rounded-lg transition-colors ${
+                    pathname === link.path
+                      ? "bg-terracotta text-white"
+                      : "text-woodBrown hover:bg-terracotta/10 hover:text-terracotta"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -110,7 +126,9 @@ export const Header = () => {
               key={link.label}
               href={link.path}
               onClick={(e) => handleNavClick(e, link.hash)}
-              className="font-opensans font-medium hover:text-terracotta transition-colors"
+              className={`font-opensans font-medium hover:text-terracotta transition-colors ${
+                pathname === link.path ? "text-terracotta font-semibold" : ""
+              }`}
             >
               {link.label}
             </Link>
