@@ -17,7 +17,7 @@ export const HeroBanner = () => {
   return (
     <section className="relative h-screen flex items-center justify-center text-white px-4 md:px-8 overflow-hidden">
       <Image
-        src="/images/lokali2.jpeg" // Update path to your image
+        src="/images/lokali2.jpeg"
         alt="Restaurant Interior"
         fill
         priority
@@ -29,7 +29,7 @@ export const HeroBanner = () => {
       <div className="absolute inset-0 texture-overlay z-2" />
 
       <motion.div
-        className="text-center max-w-4xl mx-auto relative z-10" // Ensure content stays above
+        className="text-center max-w-4xl mx-auto relative z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

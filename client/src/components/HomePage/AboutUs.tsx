@@ -37,7 +37,7 @@ export const AboutUs = () => {
             <p className="font-opensans text-woodBrown text-lg mb-6">
               Located in the heart of Myslym Shyri, Tirana, Restaurant Tepelena
               has been serving authentic Albanian cuisine to locals and visitors
-              since 1995. Our recipes have been passed down through generations,
+              since 1998. Our recipes have been passed down through generations,
               preserving the rich culinary heritage of Albania.
             </p>
             <p className="font-opensans text-woodBrown text-lg mb-8">

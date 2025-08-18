@@ -1,6 +1,6 @@
 import React from "react";
 import { engMenuMetadata } from "@/components/Metadata/metadata";
-import MenuPage from "@/components/MenuPage/MenuPage";
+import { MenuPage } from "@/components/MenuPage/MenuPage";
 
 export const metadata = engMenuMetadata;
 

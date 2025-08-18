@@ -5,6 +5,7 @@ export interface Dish {
   description: string;
   price: string;
   image: string;
+  priceUnit?: "kg"; // NEW: Add an optional priceUnit property
 }
 
 export interface MenuCategory {
@@ -18,6 +19,7 @@ export interface MenuItem {
   category: string;
   description: string;
   price: string;
+  priceUnit?: string; // NEW: Add an optional priceUnit property
 }
 
 export const featuredDishes: Dish[] = [
@@ -28,6 +30,7 @@ export const featuredDishes: Dish[] = [
     description: "Cooked on a rotating spit for about 2 hours.",
     price: "28.00",
     image: "/images/mish.jpeg",
+    priceUnit: "kg",
   },
   {
     id: 3,
@@ -80,13 +83,14 @@ export const menuCategories: MenuCategory[] = [
 ];
 
 export const menuItems: MenuItem[] = [
-  // Main Courses
+  // --- Main Courses ---
   {
     id: 1,
     name: "LAMB/GOAT ON A SPIT",
     category: "main",
     description: "Cooked on a rotating spit for about 2 hours.",
     price: "28.00",
+    priceUnit: "kg", // ADDED
   },
   {
     id: 2,
@@ -94,6 +98,7 @@ export const menuItems: MenuItem[] = [
     category: "main",
     description: "Grilled at a high temperature for 20 minutes.",
     price: "28.00",
+    priceUnit: "kg", // ADDED
   },
   {
     id: 3,
@@ -130,6 +135,7 @@ export const menuItems: MenuItem[] = [
     category: "main",
     description: "Juicy grilled beef steak, with a touch of salt.",
     price: "30.00",
+    priceUnit: "kg", // ADDED
   },
   {
     id: 8,

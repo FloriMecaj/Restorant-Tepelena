@@ -1,3 +1,5 @@
+// /components/MenuCard.tsx (Updated)
+
 import Image from "next/image";
 import { type Dish } from "@/lib/data";
 
@@ -25,7 +27,8 @@ export const MenuCard = ({ dish }: MenuCardProps) => {
         </p>
         <p className="font-opensans text-woodBrown mb-4">{dish.description}</p>
         <p className="font-playfair font-semibold text-terracotta">
-          {dish.price} €
+          {/* FIX: This line now conditionally adds the unit if it exists */}
+          {dish.price} € {dish.priceUnit && `/ ${dish.priceUnit}`}
         </p>
       </div>
     </div>

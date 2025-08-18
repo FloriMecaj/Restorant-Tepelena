@@ -5,7 +5,7 @@ import { menuCategories, menuItems } from "@/lib/data";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 
-const MenuPage = () => {
+export const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [filteredItems, setFilteredItems] = useState(menuItems);
 
@@ -47,7 +47,7 @@ const MenuPage = () => {
           <h1 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-woodBrown">
             Our Menu
           </h1>
-          <div className="w-16 h-1 bg-terracotta mx-auto mb-6"></div>
+          <div className="w-16 h-1 bg-terracotta mx-auto mb-6" />
           <p className="font-opensans text-woodBrown text-lg max-w-3xl mx-auto">
             Discover the authentic flavors of Albania through our traditional
             dishes, prepared with love and respect for our culinary heritage.
@@ -121,7 +121,7 @@ const MenuPage = () => {
                       </p>
                     </div>
                     <p className="font-playfair font-semibold text-terracotta whitespace-nowrap ml-4">
-                      {item.price} €
+                      {item.price} € {item.priceUnit && `/ ${item.priceUnit}`}
                     </p>
                   </motion.div>
                 ))}
@@ -132,5 +132,3 @@ const MenuPage = () => {
     </section>
   );
 };
-
-export default MenuPage;
