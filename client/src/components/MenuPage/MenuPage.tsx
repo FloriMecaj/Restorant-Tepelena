@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { menuCategories, menuItems } from "@/lib/data";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
+import { MenuItemDialog } from "./MenuItemDialog";
 
 export const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -97,7 +98,7 @@ export const MenuPage = () => {
               {category.name}
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredItems
                 .filter((item) =>
                   activeCategory === "all"
@@ -107,22 +108,12 @@ export const MenuPage = () => {
                 .map((item, index) => (
                   <motion.div
                     key={item.id}
-                    className="flex justify-between pb-4 border-b border-cream"
+                    className="pb-4 border-b border-cream"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                   >
-                    <div>
-                      <h3 className="font-playfair font-bold text-lg text-woodBrown">
-                        {item.name}
-                      </h3>
-                      <p className="font-opensans text-woodBrown opacity-80">
-                        {item.description}
-                      </p>
-                    </div>
-                    <p className="font-playfair font-semibold text-terracotta whitespace-nowrap ml-4">
-                      {item.price} € {item.priceUnit && `/ ${item.priceUnit}`}
-                    </p>
+                    <MenuItemDialog item={item} />
                   </motion.div>
                 ))}
             </div>
