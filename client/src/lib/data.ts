@@ -20,7 +20,6 @@ export interface MenuItem {
   description: string;
   price: string;
   priceUnit?: string; // NEW: Add an optional priceUnit property
-  image?: string;
 }
 
 export const featuredDishes: Dish[] = [
@@ -92,7 +91,6 @@ export const menuItems: MenuItem[] = [
     description: "Cooked on a rotating spit for about 2 hours.",
     price: "28.00",
     priceUnit: "kg", // ADDED
-    image: "/images/mish.jpeg",
   },
   {
     id: 2,
@@ -108,7 +106,6 @@ export const menuItems: MenuItem[] = [
     category: "main",
     description: "Rolled lamb/goat offals with tripe, cooked on a spit.",
     price: "8.00",
-    image: "/images/kukurec.jpeg",
   },
   {
     id: 4,
@@ -116,7 +113,6 @@ export const menuItems: MenuItem[] = [
     category: "main",
     description: "Grilled at a high temperature for 20 minutes.",
     price: "10.00",
-    image: "/images/tebrendshme.jpeg",
   },
   {
     id: 5,
@@ -147,7 +143,6 @@ export const menuItems: MenuItem[] = [
     category: "main",
     description: "Grilled meatballs, with spices and herbs.",
     price: "4.00",
-    image: "/images/qofte.jpeg",
   },
   {
     id: 9,
@@ -163,7 +158,6 @@ export const menuItems: MenuItem[] = [
     category: "main",
     description: "Traditional meat pie with a flaky crust.",
     price: "1.50",
-    image: "/images/byrek.jpeg",
   },
 
   // Salads
@@ -233,7 +227,6 @@ export const menuItems: MenuItem[] = [
     category: "sides",
     description: "Traditional Albanian cornbread toasted on a grill.",
     price: "1.50",
-    image: "/images/buk.jpeg",
   },
   {
     id: 20,
