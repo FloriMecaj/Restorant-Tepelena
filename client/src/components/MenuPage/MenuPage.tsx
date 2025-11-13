@@ -121,7 +121,7 @@ export const MenuPage = () => {
                       </p>
                     </div>
                     <p className="font-playfair font-semibold text-terracotta whitespace-nowrap ml-4">
-                      {item.price} € {item.priceUnit && `/ ${item.priceUnit}`}
+                      {item.price} ALL {item.priceUnit && `/ ${item.priceUnit}`}
                     </p>
                   </motion.div>
                 ))}

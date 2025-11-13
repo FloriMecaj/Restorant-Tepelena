@@ -28,7 +28,7 @@ export const MenuCard = ({ dish }: MenuCardProps) => {
         <p className="font-opensans text-woodBrown mb-4">{dish.description}</p>
         <p className="font-playfair font-semibold text-terracotta">
           {/* FIX: This line now conditionally adds the unit if it exists */}
-          {dish.price} € {dish.priceUnit && `/ ${dish.priceUnit}`}
+          {dish.price} ALL {dish.priceUnit && `/ ${dish.priceUnit}`}
         </p>
       </div>
     </div>
