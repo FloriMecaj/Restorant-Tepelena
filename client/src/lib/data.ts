@@ -240,14 +240,14 @@ export const menuItems: MenuItem[] = [
     name: "BOILED VEGETABLES",
     category: "salads",
     description: "Cauliflower, carrots, potato, beet, spinach.",
-    price: "4000.00",
+    price: "400.00",
   },
   {
     id: 16,
     name: "GRILLED VEGETABLES",
     category: "salads",
     description: "Red pepper, zucchini, eggplant.",
-    price: "4000.00",
+    price: "400.00",
   },
   {
     id: 17,
