@@ -393,7 +393,7 @@ export const menuItems: MenuItem[] = [
     name: "BIG DRAFT BEER",
     category: "drinks",
     description: "Big pint of beer.",
-    price: "350.00",
+    price: "300.00",
   },
   {
     id: 35,
