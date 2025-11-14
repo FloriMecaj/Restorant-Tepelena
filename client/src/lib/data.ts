@@ -292,7 +292,7 @@ export const menuItems: MenuItem[] = [
     name: "FETTA CHEESE",
     category: "sides",
     description: "Feta cheese with olives, olive oil and oregano.",
-    price: "4000.00",
+    price: "400.00",
   },
   {
     id: 23,
