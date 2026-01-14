@@ -27,7 +27,7 @@ export const Speciality = ({ title, content, lang }: SpecialityProps) => {
     al: {
       btn: "Porosit Specialitetin",
       recipe: "Recetë Tradicionale",
-      ingredients: "Produkte Lokale",
+      ingredients: "Produkte të freskëta",
       slow: "Pjekje e ngadaltë",
       badge: "Receta jonë sekrete!",
     },
