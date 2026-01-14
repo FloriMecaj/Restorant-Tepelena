@@ -22,6 +22,22 @@ export interface MenuItem {
   priceUnit?: string; // NEW: Add an optional priceUnit property
 }
 
+export interface SanityMenuItem {
+  _id: string;
+  name: string;
+  price: string;
+  priceUnit?: string;
+  category: string;
+  description?: string;
+  image?: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+  isFeatured?: boolean;
+}
+
 export const featuredDishes: Dish[] = [
   {
     id: 1,
