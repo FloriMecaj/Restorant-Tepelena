@@ -9,8 +9,9 @@ export default defineConfig({
   name: "default",
   title: "Restorant Tepelena",
 
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  // Replace 'p6f1z8x8' with your actual Sanity Project ID
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "kpb8npx7",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
 
   basePath: "/studio",
 
