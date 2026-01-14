@@ -4,7 +4,34 @@ import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const Maps = () => {
+interface MapsProps {
+  lang: string;
+  title?: string;
+  description?: string;
+}
+
+export const Maps = ({ lang, title, description }: MapsProps) => {
+  const t = {
+    en: {
+      title: "Find Us",
+      addressTitle: "Our Address",
+      hoursTitle: "Opening Hours",
+      monFri: "Monday - Friday:",
+      satSun: "Saturday - Sunday:",
+      callUs: "Call us for reservations",
+      btn: "Make a Reservation",
+    },
+    sq: {
+      title: "Na Gjeni",
+      addressTitle: "Adresa Jonë",
+      hoursTitle: "Orari i Hapjes",
+      monFri: "Hënë - Premte:",
+      satSun: "Shtunë - Diel:",
+      callUs: "Na telefononi për rezervime",
+      btn: "Bëni një Rezervim",
+    },
+  }[lang as "en" | "sq"];
+
   return (
     <section id="location" className="py-16 md:py-24 bg-lightStone">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
@@ -16,13 +43,11 @@ export const Maps = () => {
           viewport={{ once: true }}
         >
           <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-6 text-woodBrown">
-            Find Us
+            {title || t.title}
           </h2>
           <div className="w-16 h-1 bg-terracotta mx-auto mb-6"></div>
           <p className="font-opensans text-woodBrown text-lg max-w-3xl mx-auto">
-            Located in the heart of Myslym Shyri, one of Tirana&apos;s most
-            charming neighborhoods, Restaurant Tepelena welcomes you to
-            experience authentic Albanian cuisine.
+            {description}
           </p>
         </motion.div>
 
@@ -35,7 +60,6 @@ export const Maps = () => {
             viewport={{ once: true }}
           >
             <div className="rounded-2xl overflow-hidden shadow-lg h-80 md:h-96">
-              {/* Google Maps iframe */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3099694164944!2d19.8097592!3d41.3233753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503100df59f7ed%3A0x53db6dce7b26542a!2sRestorant%20Tepelena!5e0!3m2!1sen!2sus!4v1718112345678!5m2!1sen!2sus"
                 width="100%"
@@ -43,7 +67,6 @@ export const Maps = () => {
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 title="Restaurant Location Map"
                 className="w-full h-full"
               ></iframe>
@@ -58,7 +81,7 @@ export const Maps = () => {
             viewport={{ once: true }}
           >
             <h3 className="font-playfair font-bold text-2xl mb-6 text-woodBrown">
-              Our Address
+              {t.addressTitle}
             </h3>
 
             <div className="flex items-start mb-10">
@@ -74,35 +97,31 @@ export const Maps = () => {
             <div className="flex items-start mb-10">
               <Phone className="text-terracotta mt-1 mr-4 h-5 w-5" />
               <div>
-                <p className="font-opensans text-woodBrown">
-                  +355 69 751 4181 /0
-                </p>
+                <p className="font-opensans text-woodBrown">+355 69 751 4181</p>
                 <p className="font-opensans text-woodBrown text-sm opacity-75">
-                  Call us for reservations
+                  {t.callUs}
                 </p>
               </div>
             </div>
 
             <h3 className="font-playfair font-bold text-xl mb-4 text-woodBrown">
-              Opening Hours
+              {t.hoursTitle}
             </h3>
 
             <div className="grid grid-cols-2 gap-2 mb-6">
-              <p className="font-opensans text-woodBrown">Monday - Friday:</p>
+              <p className="font-opensans text-woodBrown">{t.monFri}</p>
               <p className="font-opensans text-woodBrown">11:00 - 23:00</p>
-
-              <p className="font-opensans text-woodBrown">Saturday - Sunday:</p>
+              <p className="font-opensans text-woodBrown">{t.satSun}</p>
               <p className="font-opensans text-woodBrown">10:00 - 00:00</p>
             </div>
 
             <a
-              href="https://wa.me/355682048648"
+              href="https://wa.me/355697514181"
               target="_blank"
               rel="noopener noreferrer"
-              className="block"
             >
               <Button className="w-full bg-terracotta hover:bg-terracottaHover text-white font-opensans font-medium px-6 py-3 rounded-2xl transition-colors shadow-lg">
-                Make a Reservation
+                {t.btn}
               </Button>
             </a>
           </motion.div>
