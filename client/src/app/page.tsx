@@ -8,6 +8,8 @@ import { Footer } from "@/components/HomePage/Footer";
 import { AlbanianPattern } from "@/components/HomePage/AlbanianPattern";
 import MenuPreviewSection from "@/components/HomePage/MenuPreviewSection";
 
+export const dynamic = "force-dynamic";
+
 async function getPageData(lang: string) {
   const query = `{
     "page": *[_type == "homepage" && language == $lang][0],

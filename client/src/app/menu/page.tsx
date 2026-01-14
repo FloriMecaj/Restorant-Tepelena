@@ -2,6 +2,8 @@ import { client } from "@/sanity/lib/client";
 import { MenuPage } from "@/components/MenuPage/MenuPage";
 import { Header } from "@/components/HomePage/Header";
 
+export const dynamic = "force-dynamic";
+
 // Metadata for SEO
 export async function generateMetadata({
   searchParams,
