@@ -41,11 +41,11 @@ export const Header = () => {
       navTitle: "Navigation",
       subtitle: "Authentic Albanian Cuisine Since 1998",
     },
-    sq: {
+    al: {
       home: "Kreu",
       about: "Rreth Nesh",
       menu: "Menuja",
-      speciality: "Specialitete",
+      speciality: "Specialiteti",
       location: "Vendndodhja",
       navTitle: "Navigimi",
       subtitle: "Kuzhinë Autentike Shqiptare që nga viti 1998",
@@ -137,8 +137,8 @@ export const Header = () => {
             </button>
             <span className="text-woodBrown/20">|</span>
             <button
-              onClick={() => toggleLanguage("sq")}
-              className={`text-sm font-bold transition-colors ${currentLang === "sq" ? "text-terracotta" : "text-woodBrown/50 hover:text-woodBrown"}`}
+              onClick={() => toggleLanguage("al")}
+              className={`text-sm font-bold transition-colors ${currentLang === "al" ? "text-terracotta" : "text-woodBrown/50 hover:text-woodBrown"}`}
             >
               AL
             </button>
@@ -174,12 +174,12 @@ export const Header = () => {
                     />
                   </button>
                   <button
-                    onClick={() => toggleLanguage("sq")}
-                    className={`flex flex-col items-center gap-1 ${currentLang === "sq" ? "text-terracotta" : "text-woodBrown"}`}
+                    onClick={() => toggleLanguage("al")}
+                    className={`flex flex-col items-center gap-1 ${currentLang === "al" ? "text-terracotta" : "text-woodBrown"}`}
                   >
                     <span className="text-xs font-bold">SHQIP</span>
                     <div
-                      className={`h-1 w-8 rounded-full ${currentLang === "sq" ? "bg-terracotta" : "bg-transparent"}`}
+                      className={`h-1 w-8 rounded-full ${currentLang === "al" ? "bg-terracotta" : "bg-transparent"}`}
                     />
                   </button>
                 </div>

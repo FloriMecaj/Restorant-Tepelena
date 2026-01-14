@@ -30,7 +30,7 @@ export const MenuPage = ({ items, lang }: MenuPageProps) => {
         { id: "drinks", name: "Drinks" },
       ],
     },
-    sq: {
+    al: {
       back: "Mbrapsht",
       all: "Të gjitha",
       title: "Menuja Jonë",
@@ -42,7 +42,7 @@ export const MenuPage = ({ items, lang }: MenuPageProps) => {
         { id: "drinks", name: "Pijet" },
       ],
     },
-  }[lang as "en" | "sq"];
+  }[lang as "en" | "al"];
 
   const filteredItems =
     activeCategory === "all"

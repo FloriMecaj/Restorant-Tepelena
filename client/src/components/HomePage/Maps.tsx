@@ -21,16 +21,16 @@ export const Maps = ({ lang, title, description }: MapsProps) => {
       callUs: "Call us for reservations",
       btn: "Make a Reservation",
     },
-    sq: {
+    al: {
       title: "Na Gjeni",
       addressTitle: "Adresa Jonë",
       hoursTitle: "Orari i Hapjes",
-      monFri: "Hënë - Premte:",
-      satSun: "Shtunë - Diel:",
+      monFri: "E Hënë - E Premte:",
+      satSun: "E Shtunë - E Diel:",
       callUs: "Na telefononi për rezervime",
       btn: "Bëni një Rezervim",
     },
-  }[lang as "en" | "sq"];
+  }[lang as "en" | "al"];
 
   return (
     <section id="location" className="py-16 md:py-24 bg-lightStone">

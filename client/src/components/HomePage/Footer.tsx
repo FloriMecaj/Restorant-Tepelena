@@ -15,13 +15,13 @@ export const Footer = ({ lang, description }: FooterProps) => {
       monFri: "Monday - Friday:",
       satSun: "Saturday - Sunday:",
     },
-    sq: {
+    al: {
       contact: "Na Kontaktoni",
       hours: "Orari i Hapjes",
-      monFri: "Hënë - Premte:",
-      satSun: "Shtunë - Diel:",
+      monFri: "E Hënë - E Premte:",
+      satSun: "E Shtunë - E Diel:",
     },
-  }[lang as "en" | "sq"];
+  }[lang as "en" | "al"];
 
   return (
     <footer className="bg-darkBrown text-white pt-16 pb-8">

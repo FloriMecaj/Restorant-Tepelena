@@ -24,14 +24,14 @@ export const Speciality = ({ title, content, lang }: SpecialityProps) => {
       slow: "Slow-roasted",
       badge: "Our secret recipe!",
     },
-    sq: {
+    al: {
       btn: "Porosit Specialitetin",
       recipe: "Recetë Tradicionale",
       ingredients: "Produkte Lokale",
       slow: "Pjekje e ngadaltë",
       badge: "Receta jonë sekrete!",
     },
-  }[lang as "en" | "sq"];
+  }[lang as "en" | "al"];
 
   const toggleVideo = () => {
     if (videoRef.current) {

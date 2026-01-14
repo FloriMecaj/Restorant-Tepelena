@@ -60,7 +60,7 @@ export const HeroBanner = ({
           onClick={scrollToMenu}
           className="bg-terracotta hover:bg-terracottaHover text-white font-opensans font-medium px-8 py-6 rounded-2xl transition-colors shadow-lg"
         >
-          {lang === "sq" ? "Shiko Menunë" : "View Our Menu"}
+          {lang === "al" ? "Shiko Menunë" : "View Our Menu"}
         </Button>
       </motion.div>
     </section>

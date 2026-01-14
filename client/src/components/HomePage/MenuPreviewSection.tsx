@@ -25,12 +25,12 @@ const MenuPreviewSection = ({
       description: "Discover the authentic flavors...",
       button: "View Full Menu",
     },
-    sq: {
+    al: {
       title: "Pjatat tona kryesore",
       description: "Zbuloni shijet autentike...",
       button: "Shiko Menunë e Plotë",
     },
-  }[lang as "en" | "sq"];
+  }[lang as "en" | "al"];
 
   return (
     <section id="menu" className="py-16 md:py-24 bg-lightStone">

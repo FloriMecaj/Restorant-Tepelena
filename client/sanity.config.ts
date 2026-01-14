@@ -23,7 +23,7 @@ export default defineConfig({
     documentInternationalization({
       supportedLanguages: [
         { id: "en", title: "English" },
-        { id: "sq", title: "Albanian" },
+        { id: "al", title: "Albanian" },
       ],
       schemaTypes: ["homepage", "menuItem"],
     }),

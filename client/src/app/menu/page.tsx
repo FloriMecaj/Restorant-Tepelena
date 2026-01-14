@@ -13,7 +13,7 @@ export async function generateMetadata({
   const { lang = "en" } = await searchParams;
   return {
     title:
-      lang === "sq"
+      lang === "al"
         ? "Menuja - Restorant Tepelena"
         : "Menu - Restaurant Tepelena",
   };

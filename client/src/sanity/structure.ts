@@ -30,7 +30,7 @@ export const structure: StructureResolver = (S) =>
                 .child(
                   S.documentList()
                     .title("Albanian Menu")
-                    .filter('_type == "menuItem" && language == "sq"')
+                    .filter('_type == "menuItem" && language == "al"')
                 ),
             ])
         ),
