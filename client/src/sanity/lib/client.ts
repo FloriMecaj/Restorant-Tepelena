@@ -1,8 +1,11 @@
 import { createClient } from "next-sanity";
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "kpb8npx7"; // Add a fallback string here
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
+
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  projectId,
+  dataset,
   apiVersion: "2024-01-01",
-  useCdn: false, // Set to true for faster production speed
+  useCdn: false,
 });
