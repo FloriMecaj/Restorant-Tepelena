@@ -21,7 +21,7 @@ export async function generateMetadata({
 
 async function getMenuItems(lang: string) {
   return await client.fetch(
-    `*[_type == "menuItem" && language == $lang] | order(category asc)`,
+    `*[_type == "menuItem" && language == $lang] | order(category asc, menuOrder asc)`,
     { lang }
   );
 }

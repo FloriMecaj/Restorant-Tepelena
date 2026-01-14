@@ -20,6 +20,13 @@ export const menuItem = {
         ],
       },
     },
+    {
+      name: "menuOrder",
+      title: "Menu Order Number",
+      type: "number",
+      description:
+        "Use 10, 20, 30... (10 shows first). This allows you to put new items in between later (like 15).",
+    },
     { name: "description", title: "Description", type: "text" },
     {
       name: "image",
@@ -37,18 +44,25 @@ export const menuItem = {
   preview: {
     select: {
       title: "name",
-      subtitle: "language",
+      order: "menuOrder",
+      lang: "language",
       media: "image",
     },
-    prepare(selection: { title?: string; subtitle?: string; media?: unknown }) {
-      const { title, subtitle, media } = selection;
+    prepare(selection: {
+      title?: string;
+      order?: number;
+      lang?: string;
+      media?: unknown;
+    }) {
+      const { title, order, lang, media } = selection;
+
       return {
-        title: title,
-        // We add a check to make sure subtitle is a string before calling toUpperCase
+        title: `${order !== undefined ? order : "??"} - ${title || "Untitled"}`,
         subtitle:
-          typeof subtitle === "string"
-            ? `[${subtitle.toUpperCase()}]`
+          typeof lang === "string"
+            ? `[${lang.toUpperCase()}]`
             : "No Language Set",
+
         media: media,
       };
     },
