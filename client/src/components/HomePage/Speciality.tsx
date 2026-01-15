@@ -88,7 +88,14 @@ export const Speciality = ({ title, content, lang }: SpecialityProps) => {
 
           <motion.div
             className="w-full md:w-1/2 order-1 md:order-2 relative"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{
+              opacity: 0,
+              x:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? 0
+                  : -50,
+              y: 20,
+            }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

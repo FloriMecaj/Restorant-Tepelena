@@ -32,7 +32,14 @@ export const AboutUs = ({ title, text1, text2, founderRole }: AboutUsProps) => {
           </motion.div>
           <motion.div
             className="w-full md:w-1/2"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{
+              opacity: 0,
+              x:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? 0
+                  : -50,
+              y: 20,
+            }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

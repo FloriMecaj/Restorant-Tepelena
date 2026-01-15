@@ -64,6 +64,13 @@
     @apply bg-cream text-woodBrown font-opensans antialiased;
   }
 
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
+
   h1,
   h2,
   h3,
